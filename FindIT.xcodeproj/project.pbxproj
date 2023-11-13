@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70BFB77D2B027F9F00F86F3F /* FindITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BFB77C2B027F9F00F86F3F /* FindITApp.swift */; };
+		70BFB77F2B027F9F00F86F3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BFB77E2B027F9F00F86F3F /* ContentView.swift */; };
+		70BFB7812B027FAA00F86F3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BFB7802B027FAA00F86F3F /* Assets.xcassets */; };
+		70BFB7842B027FAA00F86F3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BFB7832B027FAA00F86F3F /* Preview Assets.xcassets */; };
+		70BFB78E2B027FAB00F86F3F /* FindITTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BFB78D2B027FAB00F86F3F /* FindITTests.swift */; };
+		70BFB7982B027FAB00F86F3F /* FindITUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BFB7972B027FAB00F86F3F /* FindITUITests.swift */; };
+		70BFB79A2B027FAB00F86F3F /* FindITUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BFB7992B027FAB00F86F3F /* FindITUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70BFB78A2B027FAB00F86F3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70BFB7712B027F9E00F86F3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70BFB7782B027F9E00F86F3F;
+			remoteInfo = FindIT;
+		};
+		70BFB7942B027FAB00F86F3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70BFB7712B027F9E00F86F3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70BFB7782B027F9E00F86F3F;
+			remoteInfo = FindIT;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		70BFB7792B027F9F00F86F3F /* FindIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70BFB77C2B027F9F00F86F3F /* FindITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindITApp.swift; sourceTree = "<group>"; };
+		70BFB77E2B027F9F00F86F3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		70BFB7802B027FAA00F86F3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70BFB7832B027FAA00F86F3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		70BFB7892B027FAB00F86F3F /* FindITTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindITTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70BFB78D2B027FAB00F86F3F /* FindITTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindITTests.swift; sourceTree = "<group>"; };
+		70BFB7932B027FAB00F86F3F /* FindITUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindITUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70BFB7972B027FAB00F86F3F /* FindITUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindITUITests.swift; sourceTree = "<group>"; };
+		70BFB7992B027FAB00F86F3F /* FindITUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindITUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70BFB7762B027F9E00F86F3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70BFB7862B027FAB00F86F3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70BFB7902B027FAB00F86F3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70BFB7702B027F9E00F86F3F = {
+			isa = PBXGroup;
+			children = (
+				70BFB77B2B027F9F00F86F3F /* FindIT */,
+				70BFB78C2B027FAB00F86F3F /* FindITTests */,
+				70BFB7962B027FAB00F86F3F /* FindITUITests */,
+				70BFB77A2B027F9F00F86F3F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70BFB77A2B027F9F00F86F3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70BFB7792B027F9F00F86F3F /* FindIT.app */,
+				70BFB7892B027FAB00F86F3F /* FindITTests.xctest */,
+				70BFB7932B027FAB00F86F3F /* FindITUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70BFB77B2B027F9F00F86F3F /* FindIT */ = {
+			isa = PBXGroup;
+			children = (
+				70BFB77C2B027F9F00F86F3F /* FindITApp.swift */,
+				70BFB77E2B027F9F00F86F3F /* ContentView.swift */,
+				70BFB7802B027FAA00F86F3F /* Assets.xcassets */,
+				70BFB7822B027FAA00F86F3F /* Preview Content */,
+			);
+			path = FindIT;
+			sourceTree = "<group>";
+		};
+		70BFB7822B027FAA00F86F3F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				70BFB7832B027FAA00F86F3F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		70BFB78C2B027FAB00F86F3F /* FindITTests */ = {
+			isa = PBXGroup;
+			children = (
+				70BFB78D2B027FAB00F86F3F /* FindITTests.swift */,
+			);
+			path = FindITTests;
+			sourceTree = "<group>";
+		};
+		70BFB7962B027FAB00F86F3F /* FindITUITests */ = {
+			isa = PBXGroup;
+			children = (
+				70BFB7972B027FAB00F86F3F /* FindITUITests.swift */,
+				70BFB7992B027FAB00F86F3F /* FindITUITestsLaunchTests.swift */,
+			);
+			path = FindITUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70BFB7782B027F9E00F86F3F /* FindIT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70BFB79D2B027FAB00F86F3F /* Build configuration list for PBXNativeTarget "FindIT" */;
+			buildPhases = (
+				70BFB7752B027F9E00F86F3F /* Sources */,
+				70BFB7762B027F9E00F86F3F /* Frameworks */,
+				70BFB7772B027F9E00F86F3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindIT;
+			productName = FindIT;
+			productReference = 70BFB7792B027F9F00F86F3F /* FindIT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		70BFB7882B027FAB00F86F3F /* FindITTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70BFB7A02B027FAB00F86F3F /* Build configuration list for PBXNativeTarget "FindITTests" */;
+			buildPhases = (
+				70BFB7852B027FAB00F86F3F /* Sources */,
+				70BFB7862B027FAB00F86F3F /* Frameworks */,
+				70BFB7872B027FAB00F86F3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70BFB78B2B027FAB00F86F3F /* PBXTargetDependency */,
+			);
+			name = FindITTests;
+			productName = FindITTests;
+			productReference = 70BFB7892B027FAB00F86F3F /* FindITTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		70BFB7922B027FAB00F86F3F /* FindITUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70BFB7A32B027FAB00F86F3F /* Build configuration list for PBXNativeTarget "FindITUITests" */;
+			buildPhases = (
+				70BFB78F2B027FAB00F86F3F /* Sources */,
+				70BFB7902B027FAB00F86F3F /* Frameworks */,
+				70BFB7912B027FAB00F86F3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70BFB7952B027FAB00F86F3F /* PBXTargetDependency */,
+			);
+			name = FindITUITests;
+			productName = FindITUITests;
+			productReference = 70BFB7932B027FAB00F86F3F /* FindITUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70BFB7712B027F9E00F86F3F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					70BFB7782B027F9E00F86F3F = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					70BFB7882B027FAB00F86F3F = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 70BFB7782B027F9E00F86F3F;
+					};
+					70BFB7922B027FAB00F86F3F = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 70BFB7782B027F9E00F86F3F;
+					};
+				};
+			};
+			buildConfigurationList = 70BFB7742B027F9E00F86F3F /* Build configuration list for PBXProject "FindIT" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 70BFB7702B027F9E00F86F3F;
+			productRefGroup = 70BFB77A2B027F9F00F86F3F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70BFB7782B027F9E00F86F3F /* FindIT */,
+				70BFB7882B027FAB00F86F3F /* FindITTests */,
+				70BFB7922B027FAB00F86F3F /* FindITUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70BFB7772B027F9E00F86F3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70BFB7842B027FAA00F86F3F /* Preview Assets.xcassets in Resources */,
+				70BFB7812B027FAA00F86F3F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70BFB7872B027FAB00F86F3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70BFB7912B027FAB00F86F3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70BFB7752B027F9E00F86F3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70BFB77F2B027F9F00F86F3F /* ContentView.swift in Sources */,
+				70BFB77D2B027F9F00F86F3F /* FindITApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70BFB7852B027FAB00F86F3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70BFB78E2B027FAB00F86F3F /* FindITTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70BFB78F2B027FAB00F86F3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70BFB79A2B027FAB00F86F3F /* FindITUITestsLaunchTests.swift in Sources */,
+				70BFB7982B027FAB00F86F3F /* FindITUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70BFB78B2B027FAB00F86F3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70BFB7782B027F9E00F86F3F /* FindIT */;
+			targetProxy = 70BFB78A2B027FAB00F86F3F /* PBXContainerItemProxy */;
+		};
+		70BFB7952B027FAB00F86F3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70BFB7782B027F9E00F86F3F /* FindIT */;
+			targetProxy = 70BFB7942B027FAB00F86F3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		70BFB79B2B027FAB00F86F3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		70BFB79C2B027FAB00F86F3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		70BFB79E2B027FAB00F86F3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FindIT/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mobile.FindIT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		70BFB79F2B027FAB00F86F3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FindIT/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mobile.FindIT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		70BFB7A12B027FAB00F86F3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mobile.FindITTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindIT.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindIT";
+			};
+			name = Debug;
+		};
+		70BFB7A22B027FAB00F86F3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mobile.FindITTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindIT.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FindIT";
+			};
+			name = Release;
+		};
+		70BFB7A42B027FAB00F86F3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mobile.FindITUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindIT;
+			};
+			name = Debug;
+		};
+		70BFB7A52B027FAB00F86F3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mobile.FindITUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindIT;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70BFB7742B027F9E00F86F3F /* Build configuration list for PBXProject "FindIT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70BFB79B2B027FAB00F86F3F /* Debug */,
+				70BFB79C2B027FAB00F86F3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70BFB79D2B027FAB00F86F3F /* Build configuration list for PBXNativeTarget "FindIT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70BFB79E2B027FAB00F86F3F /* Debug */,
+				70BFB79F2B027FAB00F86F3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70BFB7A02B027FAB00F86F3F /* Build configuration list for PBXNativeTarget "FindITTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70BFB7A12B027FAB00F86F3F /* Debug */,
+				70BFB7A22B027FAB00F86F3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70BFB7A32B027FAB00F86F3F /* Build configuration list for PBXNativeTarget "FindITUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70BFB7A42B027FAB00F86F3F /* Debug */,
+				70BFB7A52B027FAB00F86F3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70BFB7712B027F9E00F86F3F /* Project object */;
+}
