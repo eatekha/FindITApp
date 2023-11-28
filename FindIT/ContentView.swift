@@ -26,12 +26,12 @@ struct ContentView: View {
                     self.isMicrophoneActive.toggle()
                     if self.isMicrophoneActive {
                         self.startRecording()
+                        
                     }
                      
                     else {
                        self.stopRecording()
                         self.hasRecording = true // Set hasRecording to true after stopping the recording
-                        print("Currently Recording")
                     }
                      
                 }) {
@@ -45,12 +45,12 @@ struct ContentView: View {
                 }
                 //For Debugging
                 if isMicrophoneActive {
-                        Text("Recording in progress")
-                            .font(.subheadline)
-                            .foregroundColor(.red)
+                    Text("Recording in progress")
+                        .font(.subheadline)
+                        .foregroundColor(.red)
                 }
                 //For Getting Recording after
-                if hasRecording {
+                if hasRecording && isMicrophoneActive == false {
                     Button("Play Recording", action: playRecording)
                 }
             }
@@ -60,6 +60,7 @@ struct ContentView: View {
             // Check for microphone permission
         AVAudioApplication.requestRecordPermission { granted in
                 if granted {
+                    print("Currently Recording")
                     // Set up and start the recorder
                     DispatchQueue.main.async {
                         self.setupRecorder()
