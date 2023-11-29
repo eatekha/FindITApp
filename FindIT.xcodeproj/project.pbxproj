@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		703A23352B10750700359318 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703A23342B10750700359318 /* WebSocketManager.swift */; };
-		70BFB77D2B027F9F00F86F3F /* FindITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BFB77C2B027F9F00F86F3F /* FindITApp.swift */; };
-		70BFB77F2B027F9F00F86F3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BFB77E2B027F9F00F86F3F /* ContentView.swift */; };
+		70A29F012B170B96008D5BA9 /* SpeechRecognizerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A29F002B170B95008D5BA9 /* SpeechRecognizerManager.swift */; };
+		70A3B8562B17A6E000AF3F90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A3B8552B17A6E000AF3F90 /* ContentView.swift */; };
+		70A3B8582B17A75600AF3F90 /* FindITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A3B8572B17A75600AF3F90 /* FindITApp.swift */; };
 		70BFB7812B027FAA00F86F3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BFB7802B027FAA00F86F3F /* Assets.xcassets */; };
 		70BFB7842B027FAA00F86F3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BFB7832B027FAA00F86F3F /* Preview Assets.xcassets */; };
 		70BFB78E2B027FAB00F86F3F /* FindITTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BFB78D2B027FAB00F86F3F /* FindITTests.swift */; };
@@ -37,9 +38,10 @@
 /* Begin PBXFileReference section */
 		7003CAB62B15A4C300102E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		703A23342B10750700359318 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
+		70A29F002B170B95008D5BA9 /* SpeechRecognizerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerManager.swift; sourceTree = "<group>"; };
+		70A3B8552B17A6E000AF3F90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		70A3B8572B17A75600AF3F90 /* FindITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindITApp.swift; sourceTree = "<group>"; };
 		70BFB7792B027F9F00F86F3F /* FindIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		70BFB77C2B027F9F00F86F3F /* FindITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindITApp.swift; sourceTree = "<group>"; };
-		70BFB77E2B027F9F00F86F3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		70BFB7802B027FAA00F86F3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70BFB7832B027FAA00F86F3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		70BFB7892B027FAB00F86F3F /* FindITTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindITTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				7003CAB62B15A4C300102E14 /* Info.plist */,
-				70BFB77C2B027F9F00F86F3F /* FindITApp.swift */,
+				70A29F002B170B95008D5BA9 /* SpeechRecognizerManager.swift */,
 				703A23342B10750700359318 /* WebSocketManager.swift */,
-				70BFB77E2B027F9F00F86F3F /* ContentView.swift */,
 				70BFB7802B027FAA00F86F3F /* Assets.xcassets */,
 				70BFB7822B027FAA00F86F3F /* Preview Content */,
+				70A3B8552B17A6E000AF3F90 /* ContentView.swift */,
+				70A3B8572B17A75600AF3F90 /* FindITApp.swift */,
 			);
 			path = FindIT;
 			sourceTree = "<group>";
@@ -263,8 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				703A23352B10750700359318 /* WebSocketManager.swift in Sources */,
-				70BFB77F2B027F9F00F86F3F /* ContentView.swift in Sources */,
-				70BFB77D2B027F9F00F86F3F /* FindITApp.swift in Sources */,
+				70A3B8582B17A75600AF3F90 /* FindITApp.swift in Sources */,
+				70A3B8562B17A6E000AF3F90 /* ContentView.swift in Sources */,
+				70A29F012B170B96008D5BA9 /* SpeechRecognizerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +437,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FindIT/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Grab User Input";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This is how I collect user input";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -465,7 +469,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FindIT/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Grab User Input";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This is how I collect user input";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
