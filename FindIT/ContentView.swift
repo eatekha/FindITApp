@@ -53,11 +53,11 @@ struct ContentView: View {
                 */
             }
         }
-        /*
+        
         .onAppear {
             setupWebSocketConnection()
         }
-         */
+         
 
     }
     
@@ -77,7 +77,7 @@ struct ContentView: View {
         private func sendMessageThroughWebSocket() {
             // Send message
             WebSocketManager.shared.sendMessage(message: "HI", to: "message")
-            print("Sent 'HI' to message on WebSocket")
+            print("Sent 'this' to message on WebSocket")
         }
     
     private func closeConnection(){

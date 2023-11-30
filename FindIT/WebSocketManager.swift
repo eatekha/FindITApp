@@ -3,7 +3,9 @@ import SocketIO
 
 class WebSocketManager {
     static let shared = WebSocketManager()
+    private var isConnectedPrinted: Bool = false // Flag to track if connection message is printed
 
+    
     private var manager: SocketManager?
     private var socket: SocketIOClient?
 
@@ -12,14 +14,44 @@ class WebSocketManager {
     }
 
     private func configureSocketClient() {
-        let url = URL(string: "http://192.168.58.101:5000")! // Replace with your server URL
+        isConnectedPrinted = false
+        // Fetching the host from environment variables
+        let host = ProcessInfo.processInfo.environment["HOST"] ?? "defaultHost" // Replace 'defaultHost' with a fallback host if needed
+
+        // Constructing the URL using the environment variable
+        let urlString = "http://\(host):5000" // Assuming the port is always 5000
+        guard let url = URL(string: urlString) else {
+            print("Invalid URL")
+            return
+        }
+
         manager = SocketManager(socketURL: url, config: [.log(true), .compress])
         socket = manager?.defaultSocket
     }
 
     func establishConnection() {
         socket?.connect()
-        print("Connection has been Established")
+        //print("Establishing Connection.....")
+        
+        socket?.on(clientEvent: .error) { data, _ in
+                if let error = data.first as? Error {
+                    print("Connection Error: \(error.localizedDescription)")
+                } else if let errorString = data.first as? String {
+                    // Sometimes the error might be a string describing the issue
+                    print("Connection Error: \(errorString)")
+                }
+            }
+        
+        // Listener for successful connection
+        socket?.on(clientEvent: .connect) { [weak self] _, _ in
+            guard let self = self else { return }
+
+            if !self.isConnectedPrinted {
+                //print("Connection has been established")
+                self.isConnectedPrinted = true // Set the flag to true after printing
+            }
+        }
+        
     }
 
     func closeConnection() {

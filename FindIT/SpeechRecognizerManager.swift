@@ -33,7 +33,7 @@ class SpeechRecognizerManager: ObservableObject {
     
     // Published properties to observe changes in the UI.
     @Published var transcribedText: String = ""
-    var temp: String = ""
+    private var temp: String = ""
 
     @Published var isRecording: Bool = false
     
@@ -59,6 +59,7 @@ class SpeechRecognizerManager: ObservableObject {
             if let result = result {
                 let transcribedText = result.bestTranscription.formattedString
                     
+                self?.temp = transcribedText
                 print(transcribedText) // Print the transcribed text in real-time
             }
 
@@ -138,9 +139,14 @@ class SpeechRecognizerManager: ObservableObject {
         print("Pause detected")
         // Implement actions to handle the detected pause.
         
-        //1. Save Current Recording to a playable file
-        
-        //2. Take Care of Sending File To Backend
+        if (temp != "") {
+            print("THIS IS THE TRANSCRIBED TEXT: " + temp)
+            //1. Save Current Recording to a playable file
+            WebSocketManager.shared.sendMessage(message: temp, to: "message")
+            print("Sent " + temp +  " to message on WebSocket")
+            //2. Take Care of Sending File To Backend
+            stopRecording()
+        }
     }
     
     private func sendFile(){
