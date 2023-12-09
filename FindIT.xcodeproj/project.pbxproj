@@ -446,6 +446,7 @@
 				INFOPLIST_FILE = FindIT/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This is how I collect user input";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "I PLAN TO USE THIS";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -478,6 +479,7 @@
 				INFOPLIST_FILE = FindIT/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This is how I collect user input";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "I PLAN TO USE THIS";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -8,8 +8,7 @@
 		<string>Audio</string>
 		<string>Picture in Picture</string>
 		<string>audio</string>
+		<string>fetch</string>
 	</array>
-	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>I PLAN TO USE THIS</string>
 </dict>
 </plist>

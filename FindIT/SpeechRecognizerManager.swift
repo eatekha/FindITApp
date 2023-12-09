@@ -74,8 +74,11 @@ class SpeechRecognizerManager: ObservableObject {
         inputNode.removeTap(onBus: 0)
 
         // Configure the audio session for recording.
+        
         let audioSession = AVAudioSession.sharedInstance()
-        try? audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
+        
+
+        try? audioSession.setCategory(.playAndRecord, mode: .measurement, options: [.mixWithOthers])
         try? audioSession.setActive(true, options: .notifyOthersOnDeactivation)
 
         // Install an audio tap to capture the microphone input.
@@ -84,6 +87,7 @@ class SpeechRecognizerManager: ObservableObject {
             recognitionRequest.append(buffer)
             self.analyzeBuffer(buffer) // Analyze buffer for silence detection.
         }
+        
 
         // Prepare and start the audio engine.
         audioEngine.prepare()
