@@ -3,6 +3,12 @@ import Speech
 
 
 class SpeechRecognizerManager: ObservableObject {
+
+     
+
+    
+    
+    
     // Speech recognizer for converting speech to text.
     private let speechRecognizer = SFSpeechRecognizer()
     
@@ -142,13 +148,10 @@ class SpeechRecognizerManager: ObservableObject {
     private func handlePauseDetected() {
         print("Pause detected")
         // Implement actions to handle the detected pause.
-        
         if (temp != "") {
-            print("THIS IS THE TRANSCRIBED TEXT: " + temp)
-            //1. Save Current Recording to a playable file
+            
             WebSocketManager.shared.sendMessage(message: temp, to: "message")
-            print("Sent " + temp +  " to message on WebSocket")
-            //2. Take Care of Sending File To Backend
+            //print("Sent " + temp +  " to message on WebSocket")
             stopRecording()
         }
     }
@@ -172,7 +175,7 @@ class SpeechRecognizerManager: ObservableObject {
         let avgPower = 20 * log10(rms)
         return avgPower
     }
-
-
+    
+    
 }
 
