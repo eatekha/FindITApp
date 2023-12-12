@@ -9,7 +9,7 @@ public struct Movie: Codable {
     let releaseDate: String
     let voteAverage: Double
     let posterPath: String
-
+    
     enum CodingKeys: String, CodingKey {
         case title
         case overview

@@ -1,14 +1,6 @@
 import Speech
 
-
-
 class SpeechRecognizerManager: ObservableObject {
-
-     
-
-    
-    
-    
     // Speech recognizer for converting speech to text.
     private let speechRecognizer = SFSpeechRecognizer()
     
@@ -29,7 +21,7 @@ class SpeechRecognizerManager: ObservableObject {
 
     
     // Threshold for detecting silence in decibels.
-    let silenceThreshold: Float = -60 // Adjust based on testing
+    let silenceThreshold: Float = -55 // Adjust based on testing
     
     // Timer for detecting a duration of silence.
     private var silenceTimer: Timer?
@@ -46,6 +38,7 @@ class SpeechRecognizerManager: ObservableObject {
     // Starts the recording and speech recognition process.
     func startRecording() {
         // If already recording, stop and return.
+        
         if isRecording {
             stopRecording()
             return
@@ -83,12 +76,25 @@ class SpeechRecognizerManager: ObservableObject {
         
         let audioSession = AVAudioSession.sharedInstance()
         
-
-        try? audioSession.setCategory(.playAndRecord, mode: .measurement, options: [.mixWithOthers])
-        try? audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+        do {
+            try audioSession.setCategory(.playAndRecord, mode: .default, options: [.mixWithOthers, .allowBluetoothA2DP, .allowBluetooth])
+            // Successfully set the audio session category
+        } catch {
+            // Handle the error here
+            print("An error occurred setting the audio session category: \(error)")
+        }
+        
+        do {
+            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+        } catch {
+            print("An error occurred activating the audio session: \(error)")
+            // Handle the error, e.g., by stopping the recording or notifying the user
+        }
 
         // Install an audio tap to capture the microphone input.
-        let recordingFormat = inputNode.outputFormat(forBus: 0)
+        let hwSampleRate = AVAudioSession.sharedInstance().sampleRate
+        let recordingFormat = AVAudioFormat(standardFormatWithSampleRate: hwSampleRate, channels: 1)
+        
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, when) in
             recognitionRequest.append(buffer)
             self.analyzeBuffer(buffer) // Analyze buffer for silence detection.
@@ -118,7 +124,7 @@ class SpeechRecognizerManager: ObservableObject {
     func analyzeBuffer(_ buffer: AVAudioPCMBuffer) {
         let avgPower = calculateAveragePower(from: buffer)
         //print(avgPower)
-
+        
         // Check if the average power is below the silence threshold.
         if avgPower < silenceThreshold {
             // If silence is not already detected, start the silence timer.
