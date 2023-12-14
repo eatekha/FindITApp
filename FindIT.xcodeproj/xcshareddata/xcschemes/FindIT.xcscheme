@@ -76,7 +76,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "HOST"
-            value = "192.168.58.103"
+            value = "192.168.58.119"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

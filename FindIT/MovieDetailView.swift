@@ -1,4 +1,20 @@
 import SwiftUI
+import WebKit
+
+struct WebView: UIViewRepresentable {
+    var videoID: String
+
+    func makeUIView(context: Context) -> WKWebView {
+        WKWebView()
+    }
+
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        guard let youtubeURL = URL(string: "https://www.youtube.com/embed/\(videoID)") else { return }
+        uiView.scrollView.isScrollEnabled = false
+        uiView.load(URLRequest(url: youtubeURL))
+    }
+}
+
 
 struct MovieDetailView: View {
     var onBack: () -> Void
@@ -37,6 +53,12 @@ struct MovieDetailView: View {
                         .font(.body)
                         .multilineTextAlignment(.leading)
                     
+                    WebView(videoID: movie.trailer)
+                        .frame(height: 500) // Set the height of the video
+                        .frame(maxWidth: .infinity)
+                        .cornerRadius(12)
+                        .padding()
+                    
                     HStack {
                         Spacer()
                         Button("Back to Content View") {
@@ -62,7 +84,9 @@ struct MovieDetailView_Previews: PreviewProvider {
             overview: "This is a sample movie for preview purposes.",
             releaseDate: "2023-01-01",
             voteAverage: 8.5,
-            posterPath: "https://www.themoviedb.org/t/p/original/78lPtwv72eTNqFW9COBYI0dWDJa.jpg"
+            posterPath: "https://www.themoviedb.org/t/p/original/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+            trailer: "eOrNdBpGMv8"
+
         )
         MovieDetailView(onBack: {}, movie: sampleMovie)
     }

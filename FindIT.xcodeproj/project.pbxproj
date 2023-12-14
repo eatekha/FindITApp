@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		703A23352B10750700359318 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703A23342B10750700359318 /* WebSocketManager.swift */; };
 		704629062B278DB700040259 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704629052B278DB700040259 /* MovieDetailView.swift */; };
+		709B73382B2A74200000BFA4 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 709B73372B2A74200000BFA4 /* YouTubeiOSPlayerHelper */; };
 		70A29F012B170B96008D5BA9 /* SpeechRecognizerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A29F002B170B95008D5BA9 /* SpeechRecognizerManager.swift */; };
 		70A3B8562B17A6E000AF3F90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A3B8552B17A6E000AF3F90 /* ContentView.swift */; };
 		70A3B8582B17A75600AF3F90 /* FindITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A3B8572B17A75600AF3F90 /* FindITApp.swift */; };
@@ -60,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70BCF8882B1848EA0068A982 /* SocketIO in Frameworks */,
+				709B73382B2A74200000BFA4 /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +160,7 @@
 			name = FindIT;
 			packageProductDependencies = (
 				70BCF8872B1848EA0068A982 /* SocketIO */,
+				709B73372B2A74200000BFA4 /* YouTubeiOSPlayerHelper */,
 			);
 			productName = FindIT;
 			productReference = 70BFB7792B027F9F00F86F3F /* FindIT.app */;
@@ -233,6 +236,7 @@
 			mainGroup = 70BFB7702B027F9E00F86F3F;
 			packageReferences = (
 				70BCF8862B1848EA0068A982 /* XCRemoteSwiftPackageReference "socket" */,
+				709B73362B2A74200000BFA4 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 			);
 			productRefGroup = 70BFB77A2B027F9F00F86F3F /* Products */;
 			projectDirPath = "";
@@ -616,6 +620,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		709B73362B2A74200000BFA4 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
 		70BCF8862B1848EA0068A982 /* XCRemoteSwiftPackageReference "socket" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
@@ -627,6 +639,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		709B73372B2A74200000BFA4 /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 709B73362B2A74200000BFA4 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
 		70BCF8872B1848EA0068A982 /* SocketIO */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 70BCF8862B1848EA0068A982 /* XCRemoteSwiftPackageReference "socket" */;

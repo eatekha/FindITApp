@@ -9,10 +9,12 @@ public struct Movie: Codable {
     let releaseDate: String
     let voteAverage: Double
     let posterPath: String
+    let trailer: String
     
     enum CodingKeys: String, CodingKey {
         case title
         case overview
+        case trailer
         case releaseDate = "release_date"
         case voteAverage = "vote_average"
         case posterPath = "poster_path"
@@ -114,10 +116,6 @@ struct ContentView: View {
                                     showMovieDetails = true
                                     let movie = try JSONDecoder().decode(Movie.self, from: jsonData)
                                     self.selectedMovie = movie // Update the selected movie
-
-                                    print("Title: \(movie.title)")
-                                    print("Overview: \(movie.overview)")
-                                    // Access other fields as needed
                                 } catch {
                                     print("Error parsing JSON: \(error)")
                                 }
@@ -146,7 +144,9 @@ struct ContentView: View {
             overview: "This is a sample movie for preview purposes.",
             releaseDate: "2023-01-01",
             voteAverage: 8.5,
-            posterPath: "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg"
+            posterPath: "https://www.themoviedb.org/t/p/original/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+            trailer: "eOrNdBpGMv8"
+
         )
     }
     
