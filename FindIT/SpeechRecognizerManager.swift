@@ -12,7 +12,7 @@ class SpeechRecognizerManager: ObservableObject {
     
     // Task for managing the speech recognition process.
     private var recognitionTask: SFSpeechRecognitionTask?
-    
+
     //Managing the Recording of Audio
     private var audioRecorder: AVAudioRecorder?
     
@@ -21,7 +21,7 @@ class SpeechRecognizerManager: ObservableObject {
 
     
     // Threshold for detecting silence in decibels.
-    let silenceThreshold: Float = -55 // Adjust based on testing
+    let silenceThreshold: Float = -45 // Adjust based on testing
     
     // Timer for detecting a duration of silence.
     private var silenceTimer: Timer?
@@ -38,11 +38,11 @@ class SpeechRecognizerManager: ObservableObject {
     // Starts the recording and speech recognition process.
     func startRecording() {
         // If already recording, stop and return.
-        
         if isRecording {
             stopRecording()
             return
         }
+        resetSilenceTimer()
         
         // Set recording flag to true and prepare for a new recognition request.
         isRecording = true
@@ -60,6 +60,8 @@ class SpeechRecognizerManager: ObservableObject {
                     
                 self?.temp = transcribedText
                 print(transcribedText) // Print the transcribed text in real-time
+                
+                self?.resetSilenceTimer()
             }
 
             // Stop recording on error.
@@ -97,10 +99,8 @@ class SpeechRecognizerManager: ObservableObject {
         
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, when) in
             recognitionRequest.append(buffer)
-            self.analyzeBuffer(buffer) // Analyze buffer for silence detection.
         }
         
-
         // Prepare and start the audio engine.
         audioEngine.prepare()
         try? audioEngine.start()
@@ -117,71 +117,33 @@ class SpeechRecognizerManager: ObservableObject {
         isRecording = false
         silenceTimer?.invalidate()
         silenceTimer = nil
+        cancelSilenceTimer()
         print("Stopped Recording")
     }
     
-    // Analyzes the audio buffer to detect silence.
-    func analyzeBuffer(_ buffer: AVAudioPCMBuffer) {
-        let avgPower = calculateAveragePower(from: buffer)
-        //print(avgPower)
-        
-        // Check if the average power is below the silence threshold.
-        if avgPower < silenceThreshold {
-            // If silence is not already detected, start the silence timer.
-            if !isSilenceDetected {
-                startSilenceTimer()
-                isSilenceDetected = true
-                // print("Silence has been detected")
-            }
-        } else {
-            // If not silent, invalidate the timer and reset the flag.
-            isSilenceDetected = false
-            silenceTimer?.invalidate()
-        }
-    }
-
-    // Starts a timer that triggers after a certain duration of silence.
-    private func startSilenceTimer() {
-        DispatchQueue.main.async {
-            self.silenceTimer?.invalidate()  // Invalidate any existing timer
-            self.silenceTimer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { [weak self] _ in
-                self?.handlePauseDetected() // Handle pause detection.
-            }
-        }
-    }
 
     // Handles the detected pause in speech.
     private func handlePauseDetected() {
         print("Pause detected")
         // Implement actions to handle the detected pause.
         if (temp != "") {
-            
             WebSocketManager.shared.sendMessage(message: temp, to: "message")
-            //print("Sent " + temp +  " to message on WebSocket")
             stopRecording()
         }
     }
     
-    private func sendFile(){
-        print("File Sent")
+    // Reset and start the silence detection timer
+    private func resetSilenceTimer() {
+        silenceTimer?.invalidate()
+        silenceTimer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { [weak self] _ in
+            self?.isSilenceDetected = true
+            self?.handlePauseDetected()
+        }
     }
-    
-    // Calculates the average power of the audio buffer in decibels.
-    private func calculateAveragePower(from buffer: AVAudioPCMBuffer) -> Float {
-        guard let channelData = buffer.floatChannelData else { return 0.0 }
 
-        // Extract the frame values and calculate the RMS.
-        let channelDataValue = channelData.pointee
-        let frames = Int(buffer.frameLength)
-        let channelDataValues = (0..<frames).map { channelDataValue[$0] }
-
-        let rms = sqrt(channelDataValues.map { $0 * $0 }.reduce(0, +) / Float(frames))
-
-        // Convert RMS to decibels.
-        let avgPower = 20 * log10(rms)
-        return avgPower
+    // Call this function when you stop recording or when you detect speech
+    private func cancelSilenceTimer() {
+        silenceTimer?.invalidate()
+        silenceTimer = nil
     }
-    
-    
 }
-
