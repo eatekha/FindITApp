@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2742BDEDA24C3875BFEDD49F /* Pods_FindITTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBBD7EC7A53178E4CE61A9C /* Pods_FindITTests.framework */; };
 		703A23352B10750700359318 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703A23342B10750700359318 /* WebSocketManager.swift */; };
 		704629062B278DB700040259 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704629052B278DB700040259 /* MovieDetailView.swift */; };
+		707EAD2B2B3A8BDD00BBB3EC /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707EAD2A2B3A8BDD00BBB3EC /* AudioManager.swift */; };
 		709B73382B2A74200000BFA4 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 709B73372B2A74200000BFA4 /* YouTubeiOSPlayerHelper */; };
-		70A29F012B170B96008D5BA9 /* SpeechRecognizerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A29F002B170B95008D5BA9 /* SpeechRecognizerManager.swift */; };
 		70A3B8562B17A6E000AF3F90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A3B8552B17A6E000AF3F90 /* ContentView.swift */; };
 		70A3B8582B17A75600AF3F90 /* FindITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A3B8572B17A75600AF3F90 /* FindITApp.swift */; };
 		70BCF8882B1848EA0068A982 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 70BCF8872B1848EA0068A982 /* SocketIO */; };
@@ -19,6 +20,10 @@
 		70BFB78E2B027FAB00F86F3F /* FindITTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BFB78D2B027FAB00F86F3F /* FindITTests.swift */; };
 		70BFB7982B027FAB00F86F3F /* FindITUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BFB7972B027FAB00F86F3F /* FindITUITests.swift */; };
 		70BFB79A2B027FAB00F86F3F /* FindITUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BFB7992B027FAB00F86F3F /* FindITUITestsLaunchTests.swift */; };
+		70BFC96B2B391EA60030FC8C /* WhisperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BFC96A2B391EA60030FC8C /* WhisperManager.swift */; };
+		70C4EE232B39D32700F46B3C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 70C4EE222B39D32700F46B3C /* Alamofire */; };
+		8AEC0562F677EE77FAF1AE54 /* Pods_FindIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083EC1700E35D4DF995AD127 /* Pods_FindIT.framework */; };
+		B444231FB00BD33BA651CB61 /* Pods_FindIT_FindITUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A12DD022E6599C91C3EC45B /* Pods_FindIT_FindITUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,11 +43,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		70D608B22B36B01E00E23B8F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		083EC1700E35D4DF995AD127 /* Pods_FindIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A12DD022E6599C91C3EC45B /* Pods_FindIT_FindITUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindIT_FindITUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E71A82B456491FD7FAFDBE6 /* Pods-FindIT-FindITUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindIT-FindITUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindIT-FindITUITests/Pods-FindIT-FindITUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4EBBD7EC7A53178E4CE61A9C /* Pods_FindITTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindITTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		646A356D37E00754CB8A8FB3 /* Pods-FindIT-FindITUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindIT-FindITUITests.release.xcconfig"; path = "Target Support Files/Pods-FindIT-FindITUITests/Pods-FindIT-FindITUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7003CAB62B15A4C300102E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		703190602B36AD4600F39371 /* Cobra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cobra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		703A23342B10750700359318 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
 		704629052B278DB700040259 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
-		70A29F002B170B95008D5BA9 /* SpeechRecognizerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerManager.swift; sourceTree = "<group>"; };
+		707EAD2A2B3A8BDD00BBB3EC /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		70A3B8552B17A6E000AF3F90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		70A3B8572B17A75600AF3F90 /* FindITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindITApp.swift; sourceTree = "<group>"; };
 		70BFB7792B027F9F00F86F3F /* FindIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +77,11 @@
 		70BFB7932B027FAB00F86F3F /* FindITUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindITUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BFB7972B027FAB00F86F3F /* FindITUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindITUITests.swift; sourceTree = "<group>"; };
 		70BFB7992B027FAB00F86F3F /* FindITUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindITUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		70BFC96A2B391EA60030FC8C /* WhisperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperManager.swift; sourceTree = "<group>"; };
+		8E8F5FDABC803BE1D434B184 /* Pods-FindITTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindITTests.release.xcconfig"; path = "Target Support Files/Pods-FindITTests/Pods-FindITTests.release.xcconfig"; sourceTree = "<group>"; };
+		B51FA70748CEBDD2E5D3ADF2 /* Pods-FindIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindIT.debug.xcconfig"; path = "Target Support Files/Pods-FindIT/Pods-FindIT.debug.xcconfig"; sourceTree = "<group>"; };
+		C4B3722A8211E988B25E5207 /* Pods-FindIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindIT.release.xcconfig"; path = "Target Support Files/Pods-FindIT/Pods-FindIT.release.xcconfig"; sourceTree = "<group>"; };
+		D42968475AFF9012E92D93AC /* Pods-FindITTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindITTests.debug.xcconfig"; path = "Target Support Files/Pods-FindITTests/Pods-FindITTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +90,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				70BCF8882B1848EA0068A982 /* SocketIO in Frameworks */,
+				70C4EE232B39D32700F46B3C /* Alamofire in Frameworks */,
 				709B73382B2A74200000BFA4 /* YouTubeiOSPlayerHelper in Frameworks */,
+				8AEC0562F677EE77FAF1AE54 /* Pods_FindIT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2742BDEDA24C3875BFEDD49F /* Pods_FindITTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +108,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B444231FB00BD33BA651CB61 /* Pods_FindIT_FindITUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39704B669BA071BD76619486 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				703190602B36AD4600F39371 /* Cobra.framework */,
+				083EC1700E35D4DF995AD127 /* Pods_FindIT.framework */,
+				0A12DD022E6599C91C3EC45B /* Pods_FindIT_FindITUITests.framework */,
+				4EBBD7EC7A53178E4CE61A9C /* Pods_FindITTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		70BFB7702B027F9E00F86F3F = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +133,8 @@
 				70BFB78C2B027FAB00F86F3F /* FindITTests */,
 				70BFB7962B027FAB00F86F3F /* FindITUITests */,
 				70BFB77A2B027F9F00F86F3F /* Products */,
+				74088AFDA54105B14DE23ADF /* Pods */,
+				39704B669BA071BD76619486 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,13 +152,14 @@
 			isa = PBXGroup;
 			children = (
 				7003CAB62B15A4C300102E14 /* Info.plist */,
-				70A29F002B170B95008D5BA9 /* SpeechRecognizerManager.swift */,
+				707EAD2A2B3A8BDD00BBB3EC /* AudioManager.swift */,
+				70BFC96A2B391EA60030FC8C /* WhisperManager.swift */,
 				703A23342B10750700359318 /* WebSocketManager.swift */,
 				70BFB7802B027FAA00F86F3F /* Assets.xcassets */,
 				70BFB7822B027FAA00F86F3F /* Preview Content */,
 				70A3B8552B17A6E000AF3F90 /* ContentView.swift */,
-				70A3B8572B17A75600AF3F90 /* FindITApp.swift */,
 				704629052B278DB700040259 /* MovieDetailView.swift */,
+				70A3B8572B17A75600AF3F90 /* FindITApp.swift */,
 			);
 			path = FindIT;
 			sourceTree = "<group>";
@@ -142,6 +189,19 @@
 			path = FindITUITests;
 			sourceTree = "<group>";
 		};
+		74088AFDA54105B14DE23ADF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B51FA70748CEBDD2E5D3ADF2 /* Pods-FindIT.debug.xcconfig */,
+				C4B3722A8211E988B25E5207 /* Pods-FindIT.release.xcconfig */,
+				0E71A82B456491FD7FAFDBE6 /* Pods-FindIT-FindITUITests.debug.xcconfig */,
+				646A356D37E00754CB8A8FB3 /* Pods-FindIT-FindITUITests.release.xcconfig */,
+				D42968475AFF9012E92D93AC /* Pods-FindITTests.debug.xcconfig */,
+				8E8F5FDABC803BE1D434B184 /* Pods-FindITTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +209,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70BFB79D2B027FAB00F86F3F /* Build configuration list for PBXNativeTarget "FindIT" */;
 			buildPhases = (
+				EE574DECE09A37F0E63EBDE3 /* [CP] Check Pods Manifest.lock */,
 				70BFB7752B027F9E00F86F3F /* Sources */,
 				70BFB7762B027F9E00F86F3F /* Frameworks */,
 				70BFB7772B027F9E00F86F3F /* Resources */,
+				70D608B22B36B01E00E23B8F /* Embed Frameworks */,
+				AC2BFFBB741FB2445A8C5153 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +224,7 @@
 			packageProductDependencies = (
 				70BCF8872B1848EA0068A982 /* SocketIO */,
 				709B73372B2A74200000BFA4 /* YouTubeiOSPlayerHelper */,
+				70C4EE222B39D32700F46B3C /* Alamofire */,
 			);
 			productName = FindIT;
 			productReference = 70BFB7792B027F9F00F86F3F /* FindIT.app */;
@@ -170,6 +234,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70BFB7A02B027FAB00F86F3F /* Build configuration list for PBXNativeTarget "FindITTests" */;
 			buildPhases = (
+				2D80366B1C67315F7F42639B /* [CP] Check Pods Manifest.lock */,
 				70BFB7852B027FAB00F86F3F /* Sources */,
 				70BFB7862B027FAB00F86F3F /* Frameworks */,
 				70BFB7872B027FAB00F86F3F /* Resources */,
@@ -188,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70BFB7A32B027FAB00F86F3F /* Build configuration list for PBXNativeTarget "FindITUITests" */;
 			buildPhases = (
+				E48B083575E12CD3CD94D396 /* [CP] Check Pods Manifest.lock */,
 				70BFB78F2B027FAB00F86F3F /* Sources */,
 				70BFB7902B027FAB00F86F3F /* Frameworks */,
 				70BFB7912B027FAB00F86F3F /* Resources */,
+				1E66055335CE9192AD19E272 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +304,7 @@
 			packageReferences = (
 				70BCF8862B1848EA0068A982 /* XCRemoteSwiftPackageReference "socket" */,
 				709B73362B2A74200000BFA4 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
+				70C4EE212B39D32700F46B3C /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 70BFB77A2B027F9F00F86F3F /* Products */;
 			projectDirPath = "";
@@ -275,16 +343,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E66055335CE9192AD19E272 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindIT-FindITUITests/Pods-FindIT-FindITUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindIT-FindITUITests/Pods-FindIT-FindITUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindIT-FindITUITests/Pods-FindIT-FindITUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D80366B1C67315F7F42639B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindITTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC2BFFBB741FB2445A8C5153 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindIT/Pods-FindIT-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindIT/Pods-FindIT-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindIT/Pods-FindIT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E48B083575E12CD3CD94D396 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindIT-FindITUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE574DECE09A37F0E63EBDE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindIT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		70BFB7752B027F9E00F86F3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70BFC96B2B391EA60030FC8C /* WhisperManager.swift in Sources */,
+				707EAD2B2B3A8BDD00BBB3EC /* AudioManager.swift in Sources */,
 				704629062B278DB700040259 /* MovieDetailView.swift in Sources */,
 				703A23352B10750700359318 /* WebSocketManager.swift in Sources */,
 				70A3B8582B17A75600AF3F90 /* FindITApp.swift in Sources */,
 				70A3B8562B17A6E000AF3F90 /* ContentView.swift in Sources */,
-				70A29F012B170B96008D5BA9 /* SpeechRecognizerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +614,7 @@
 		};
 		70BFB79E2B027FAB00F86F3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B51FA70748CEBDD2E5D3ADF2 /* Pods-FindIT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -449,7 +622,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FindIT/Preview Content\"";
 				DEVELOPMENT_TEAM = VNZ439HYHL;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SELECTED_FILES = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Cobra-iOS\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ios-voice-processor\"",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FindIT/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -460,6 +641,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,6 +657,7 @@
 		};
 		70BFB79F2B027FAB00F86F3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4B3722A8211E988B25E5207 /* Pods-FindIT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -482,7 +665,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FindIT/Preview Content\"";
 				DEVELOPMENT_TEAM = VNZ439HYHL;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SELECTED_FILES = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Cobra-iOS\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ios-voice-processor\"",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FindIT/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -493,6 +684,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -508,6 +700,7 @@
 		};
 		70BFB7A12B027FAB00F86F3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D42968475AFF9012E92D93AC /* Pods-FindITTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -527,6 +720,7 @@
 		};
 		70BFB7A22B027FAB00F86F3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E8F5FDABC803BE1D434B184 /* Pods-FindITTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -546,8 +740,9 @@
 		};
 		70BFB7A42B027FAB00F86F3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E71A82B456491FD7FAFDBE6 /* Pods-FindIT-FindITUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -563,8 +758,9 @@
 		};
 		70BFB7A52B027FAB00F86F3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 646A356D37E00754CB8A8FB3 /* Pods-FindIT-FindITUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -636,6 +832,14 @@
 				kind = branch;
 			};
 		};
+		70C4EE212B39D32700F46B3C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -648,6 +852,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 70BCF8862B1848EA0068A982 /* XCRemoteSwiftPackageReference "socket" */;
 			productName = SocketIO;
+		};
+		70C4EE222B39D32700F46B3C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70C4EE212B39D32700F46B3C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

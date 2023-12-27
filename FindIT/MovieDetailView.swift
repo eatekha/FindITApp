@@ -83,7 +83,6 @@ struct MovieDetailView_Previews: PreviewProvider {
             title: "Sample Movie",
             overview: "This is a sample movie for preview purposes.",
             releaseDate: "2023-01-01",
-            voteAverage: 8.5,
             posterPath: "https://www.themoviedb.org/t/p/original/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
             trailer: "eOrNdBpGMv8"
 

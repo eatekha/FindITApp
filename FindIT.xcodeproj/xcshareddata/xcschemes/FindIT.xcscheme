@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1500"
+   LastUpgradeVersion = "1510"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -77,6 +77,26 @@
          <EnvironmentVariable
             key = "HOST"
             value = "192.168.58.119"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SCHOOL"
+            value = "172.20.10.4"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "HONEY"
+            value = "10.0.0.24"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "ACCESS_KEY"
+            value = "jpJ1R15x05JwAT24qfCgjnvCLaO06q4w67/6wTJ0j39BJJ1th95H0w=="
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "WHISPER_API_KEY"
+            value = "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"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

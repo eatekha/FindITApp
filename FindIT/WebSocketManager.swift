@@ -15,8 +15,9 @@ class WebSocketManager {
 
     private func configureSocketClient() {
         isConnectedPrinted = false
+        
         // Fetching the host from environment variables
-        let host = ProcessInfo.processInfo.environment["HOST"] ?? "defaultHost" // Replace 'defaultHost' with a fallback host if needed
+        let host = ProcessInfo.processInfo.environment["HONEY"] ?? "defaultHost" // Replace 'defaultHost' with a fallback host if needed
 
         // Constructing the URL using the environment variable
         let urlString = "http://\(host):5000" // Assuming the port is always 5000
@@ -35,21 +36,16 @@ class WebSocketManager {
         
         socket?.on(clientEvent: .error) { data, _ in
                 if let error = data.first as? Error {
-                    print("Connection Error: \(error.localizedDescription)")
+                   print("Connection Error: \(error.localizedDescription)")
                 } else if let errorString = data.first as? String {
                     // Sometimes the error might be a string describing the issue
-                    print("Connection Error: \(errorString)")
+                print("Connection Error: \(errorString)")
                 }
             }
         
         // Listener for successful connection
         socket?.on(clientEvent: .connect) { [weak self] _, _ in
-            guard let self = self else { return }
-
-            if !self.isConnectedPrinted {
-                //print("Connection has been established")
-                self.isConnectedPrinted = true // Set the flag to true after printing
-            }
+            guard self != nil else { return }
         }
         
     }
