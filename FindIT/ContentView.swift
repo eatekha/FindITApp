@@ -8,6 +8,8 @@ public struct Movie: Codable {
     let releaseDate: String
     let posterPath: String
     let trailer: String
+    let movieLink: String
+    let dialogue_start: String
     
     enum CodingKeys: String, CodingKey {
         case title
@@ -15,6 +17,8 @@ public struct Movie: Codable {
         case trailer
         case releaseDate = "release_date"
         case posterPath = "poster_path"
+        case movieLink = "movie_link"
+        case dialogue_start
     }
 }
 
@@ -29,6 +33,7 @@ struct ContentView: View {
         WebSocketManager.shared.establishConnection()
         webSocketConnected = true
     }
+    
 
     var body: some View {
         ZStack {
@@ -104,7 +109,7 @@ struct ContentView: View {
 
 
     func sampleMovie() -> Movie {
-        Movie(title: "Sample Movie", overview: "This is a sample movie for preview purposes.", releaseDate: "2023-01-01", posterPath: "https://www.themoviedb.org/t/p/original/78lPtwv72eTNqFW9COBYI0dWDJa.jpg", trailer: "eOrNdBpGMv8")
+        Movie(title: "Sample Movie", overview: "This is a sample movie for preview purposes.", releaseDate: "2023-01-01", posterPath: "https://www.themoviedb.org/t/p/original/78lPtwv72eTNqFW9COBYI0dWDJa.jpg", trailer: "eOrNdBpGMv8", movieLink: "https://google.com", dialogue_start: "00:56:46")
     }
     
     private func getResponse() {
