@@ -2,26 +2,6 @@ import SwiftUI
 import AVFoundation
 import SocketIO
 
-public struct Movie: Codable {
-    let title: String
-    let overview: String
-    let releaseDate: String
-    let posterPath: String
-    let trailer: String
-    let movieLink: String
-    let dialogue_start: String
-    
-    enum CodingKeys: String, CodingKey {
-        case title
-        case overview
-        case trailer
-        case releaseDate = "release_date"
-        case posterPath = "poster_path"
-        case movieLink = "movie_link"
-        case dialogue_start
-    }
-}
-
 struct ContentView: View {
     @State private var webSocketConnected = false
     @State private var showMovieDetails = false
@@ -38,14 +18,17 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             if showSampleMovie {
-                MovieDetailView(onBack: { showSampleMovie = false }, movie: sampleMovie())
+                let viewModel = MovieViewModel(movie: MovieViewModel.sampleMovie()) // Create ViewModel for sample movie
+                MovieView(viewModel: viewModel, onBack: { showSampleMovie = false })
             } else if showMovieDetails, let movie = selectedMovie {
-                MovieDetailView(onBack: { showMovieDetails = false }, movie: movie)
+                let viewModel = MovieViewModel(movie: movie) // Create ViewModel for the selected movie
+                MovieView(viewModel: viewModel, onBack: { showMovieDetails = false })
             } else {
                 originalContentView
             }
         }
     }
+
 
     var originalContentView: some View {
         ZStack {
@@ -107,10 +90,6 @@ struct ContentView: View {
         }
     }
 
-
-    func sampleMovie() -> Movie {
-        Movie(title: "Sample Movie", overview: "This is a sample movie for preview purposes.", releaseDate: "2023-01-01", posterPath: "https://www.themoviedb.org/t/p/original/78lPtwv72eTNqFW9COBYI0dWDJa.jpg", trailer: "eOrNdBpGMv8", movieLink: "https://google.com", dialogue_start: "00:56:46")
-    }
     
     private func getResponse() {
             if !webSocketConnected {
@@ -138,8 +117,6 @@ struct ContentView: View {
                                 
                             }
                         }
-                        
-                        
                     }
                 }
             }

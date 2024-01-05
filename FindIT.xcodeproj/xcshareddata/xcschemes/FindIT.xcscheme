@@ -86,7 +86,7 @@
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "HONEY"
-            value = "10.0.0.24"
+            value = "10.0.0.210"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
